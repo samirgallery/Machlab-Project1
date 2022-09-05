@@ -1,0 +1,112 @@
+
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> SignUp Form  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<style>
+	body{
+		background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+	}
+	
+
+	
+	h1{
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 30px;
+		text-shadow: 1px 3px 3px black;
+		margin-top: 20px;
+	}
+	
+	.logo{
+		margin-top: -5%;
+		margin-left:25% ;
+		
+	}
+	span{
+		color: orange;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	span:hover{
+		text-shadow: 0 0 2px #FC466B;
+		color: whitesmoke ;
+	}
+	.email{
+		margin-top: -10%;
+	}
+	.pr{
+		color: transparent;
+	}
+	.btn1{
+		background-color: transparent;
+	}
+	.SIGNUP{
+		background-color: transparent;
+	}
+	
+	
+	
+	
+
+</style>
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>HSA REGISTRATION FORM</h1>
+		<img src="./TR_prev_ui.png" class="logo" alt="" width="100px" height="100px">
+		<h3 style="color: whitesmoke"></h3>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="{% url 'register' %}" method="post" class="pr">
+					{% csrf_token %}
+					
+					<input class="text" type="text" name="fname" placeholder="Firstname" required=""><br>
+					<input class="text" type="text" name="lname" placeholder="Lastname" required=""><br>
+					<input class="text" type="text" name="contact" placeholder="Contact" required=""><br> 
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="cpassword" placeholder="Confirm Password" required="">
+					<input type="submit" class="btn1" value="SIGNUP">
+				</form>
+				<!-- <p>Don't have an Account? <a href="./login.html"> Login Now!</a></p> -->
+			</div>
+		</div>
+		
+		<div class="colorlibcopy-agile">
+			<p>© 2022  Signup Form. All rights reserved | Design by <a href="http://machlabdsb.com/" target="_blank"><span>MACHLAB</span> </a></p>
+		</div>
+		
+		<ul class="colorlib-bubbles MACHLAB">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</body>
+</html>
